@@ -1,4 +1,4 @@
-class Viaje {
+/*class Viaje {
     constructor (id, nombre, lugares, precio, fecha, descripcion,imgSrc) {
         this.id = id
         this.nombre = nombre
@@ -15,4 +15,4 @@ const viajeB = new Viaje(1, "roma", 35, 380000, "29 agosto", "¿Qué te parecer�
 const viajeC = new Viaje(2, "paris", 40, 270000, "10 septiembre", "París es considerada una de las ciudades más bellas de Europa. que mejor aúnan el romanticismo,  el arte, la cultura y los monumentos. Descubra todo lo que puede ofrecer París, la Ciudad del Amor y de la Luz. Recibe a todos los viajeros con su belleza única debido a su unica.", "./imagenes/paris.png")
 const viajeD = new Viaje(3,"berlin", 23, 420000, "15 octubre", "Los paquetes a Berlín que buscás para tus viajes, te esperan en Buenos Viajes. No dejés pasar un minuto más, comprá ya mismo tu paquete turístico BARATO y pasá unos días fantásticos en Berlín. Con nuestros PAQUETES TURÍSTICOS todo lo que estabas buscando para tus vacaciones está en un solo lugar.", "./imagenes/berlin.png")
 
-const viajes = [viajeA, viajeB, viajeC, viajeD]
+const viajes = [viajeA, viajeB, viajeC, viajeD]*/

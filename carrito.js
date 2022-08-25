@@ -5,6 +5,7 @@ const carritoEl = document.querySelector(".productosCarrito");
 const carritoTotal = document.querySelector(".total");
 
 //rederizado productos
+const viajes = []
 function renderProductos () {
     viajes.forEach( (viaje) => {
         productosEl.innerHTML += ` 
@@ -20,7 +21,7 @@ function renderProductos () {
     `;
     });
 }
-renderProductos();
+
 //array carrito
 let carrito = JSON.parse(localStorage.getItem("CARRITO")) || [];
 actualizarCarrito();
@@ -154,19 +155,6 @@ function cambiarCantidadUnidades(accion, id){
     actualizarCarrito()
 }
 
-
-document.addEventListener("DOMContentLoaded", function(){
-  Swal.fire({
-    title: 'Bienvenido a Buenos Viajes!',
-    showClass: {
-      popup: 'animate__animated animate__fadeInDown'
-    },
-    hideClass: {
-      popup: 'animate__animated animate__fadeOutUp'
-    }
-  })
-});
-
 const alertaCompra = () => {
   Toastify({
   
@@ -179,3 +167,14 @@ const alertaCompra = () => {
 
 const botonCompra = document.querySelector(".boton--compra")
 botonCompra.addEventListener("click", alertaCompra)
+
+fetch("data.Json")
+.then((Response) => Response.json())
+.then((data) => 
+{
+     for( const viaje of data){
+      viajes.push(viaje)
+     }
+     renderProductos(viajes)
+      
+})
